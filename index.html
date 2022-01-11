@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>海洋插件社区</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<style type="text/css">
+		*{
+			padding:0;
+			margin:0;
+		}
+		.lb-head{	
+			overflow:hidden;
+			width:1000px;
+			//	height:500px;
+			border:1px solid red;
+			margin:10px auto;
+		}
+		div p{	
+			border-left:1px solid blue;
+			float:left;
+			width:199px;
+			height:50px;
+			color:green;
+			background-color:#CBC9C9;
+		}
+		div p.first{	
+			border-left:0;
+		}
+		td a,div p a{
+			display:block;
+			width:200px;
+			height:50px;
+			line-height:50px;
+			text-align:center;
+			text-decoration:none;
+		}
+		td a,div p a:link{
+			color:green;
+			background-color:#FFC9C9;
+
+		}/*
+		td a,div p a:visited{
+			color:red;
+			background-color:#C9C9FF;
+
+		}*/
+		td a,div p a:hover{
+			color:blue;
+			background-color:#FFFF00;
+
+		}
+		td a,div p a:active{
+			color:#00F;
+			background-color:#0F0;
+
+		}
+		table{
+			margin: 10px auto;
+			text-align: center;
+		}
+		table th{
+			color: #123;
+		}
+		body{
+			position:relative;
+			background-image: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3931432789,951487342&fm=26&gp=0.jpg);
+		}
+		.flower img{
+			position: absolute;
+			top:0;
+			left:0;
+			width:50px;
+			height:50px;
+		}
+		a{
+			text-decoration: none;
+		}
+		#nr{
+			font-size:20px; margin: 0;
+			font-family: Microsoft yahei;
+			background: -webkit-linear-gradient(left, #ffffff, #ff0000 6.25%, #ff7d00 12.5%, #ffff00 18.75%, #00ff00 25%, #00ffff 31.25%, #0000ff 37.5%, #ff00ff 43.75%, #ffff00 50%, #ff0000 56.25%, #ff7d00 62.5%, #ffff00 68.75%, #00ff00 75%, #00ffff 81.25%, #0000ff 87.5%, #ff00ff 93.75%, #ffff00 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-size: 200% 100%;
+			animation: masked-animation 2s infinite linear;
+			filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FF0000',endColorStr='#F9F900',gradientType='0'); 
+		} 
+		@keyframes masked-animation { 0% { background-position: 0 0; } 100% { background-position: -100%, 0; } }
+	</style>
+	<style>
+		.ct2 .mn {width:770px;}
+		.ct2 .sd {width:218px;}
+	</style>
+	<div id="wp" class="wp">
+		<div class="xnkl">
+			<div class="deng-box2">
+				<div class="deng">
+					<div class="xian"></div>
+					<div class="deng-a">
+						<div class="deng-b"><div class="deng-t">迎</div></div>
+					</div>
+					<div class="shui shui-a">
+						<div class="shui-c"></div>
+						<div class="shui-b"></div>
+					</div>
+				</div>
+			</div>
+			<div class="deng-box3">
+				<div class="deng">
+					<div class="xian"></div>
+					<div class="deng-a">
+						<div class="deng-b"><div class="deng-t">欢</div></div>
+					</div>
+					<div class="shui shui-a">
+						<div class="shui-c"></div>
+						<div class="shui-b"></div>
+					</div>
+				</div>
+			</div>
+			<div class="deng-box1">
+				<div class="deng">
+					<div class="xian"></div>
+					<div class="deng-a">
+						<div class="deng-b"><div class="deng-t">临</div></div>
+					</div>
+					<div class="shui shui-a">
+						<div class="shui-c"></div>
+						<div class="shui-b"></div>
+					</div>
+				</div>
+			</div>
+			<div class="deng-box">
+				<div class="deng">
+					<div class="xian"></div>
+					<div class="deng-a">
+						<div class="deng-b"><div class="deng-t">光</div></div>
+					</div>
+					<div class="shui shui-a">
+						<div class="shui-c"></div>
+						<div class="shui-b"></div>
+					</div>
+				</div>
+			</div>        
+		</div>
+		<style type="text/css">
+			@media screen and (max-width: 768px) {
+
+				.xnkl{
+
+					display:none; }
+
+				}
+				.deng-box {
+					position: fixed;
+					top: -40px;
+					right: 150px;
+					z-index: 9999;
+					pointer-events: none;
+				}
+
+				.deng-box1 {
+					position: fixed;
+					top: -30px;
+					right: 10px;
+					z-index: 9999;
+					pointer-events: none
+				}
+
+				.deng-box2 {
+					position: fixed;
+					top: -40px;
+					left: 150px;
+					z-index: 9999;
+					pointer-events: none
+				}
+
+				.deng-box3 {
+					position: fixed;
+					top: -30px;
+					left: 10px;
+					z-index: 9999;
+					pointer-events: none
+				}
+
+				.deng-box1 .deng,.deng-box3 .deng {
+					position: relative;
+					width: 120px;
+					height: 90px;
+					margin: 50px;
+					background: #d8000f;
+					background: rgba(216,0,15,.8);
+					border-radius: 50% 50%;
+					-webkit-transform-origin: 50% -100px;
+					-webkit-animation: swing 5s infinite ease-in-out;
+					box-shadow: -5px 5px 30px 4px #fc903d
+				}
+
+				.deng {
+					position: relative;
+					width: 120px;
+					height: 90px;
+					margin: 50px;
+					background: #d8000f;
+					background: rgba(216,0,15,.8);
+					border-radius: 50% 50%;
+					-webkit-transform-origin: 50% -100px;
+					-webkit-animation: swing 3s infinite ease-in-out;
+					box-shadow: -5px 5px 50px 4px #fa6c00
+				}
+
+				.deng-a {
+					width: 100px;
+					height: 90px;
+					background: #d8000f;
+					background: rgba(216,0,15,.1);
+					margin: 12px 8px 8px 8px;
+					border-radius: 50% 50%;
+					border: 2px solid #dc8f03
+				}
+
+				.deng-b {
+					width: 45px;
+					height: 90px;
+					background: #d8000f;
+					background: rgba(216,0,15,.1);
+					margin: -4px 8px 8px 26px;
+					border-radius: 50% 50%;
+					border: 2px solid #dc8f03
+				}
+
+				.xian {
+					position: absolute;
+					top: -20px;
+					left: 60px;
+					width: 2px;
+					height: 20px;
+					background: #dc8f03
+				}
+
+				.shui-a {
+					position: relative;
+					width: 5px;
+					height: 20px;
+					margin: -5px 0 0 59px;
+					-webkit-animation: swing 4s infinite ease-in-out;
+					-webkit-transform-origin: 50% -45px;
+					background: orange;
+					border-radius: 0 0 5px 5px
+				}
+
+				.shui-b {
+					position: absolute;
+					top: 14px;
+					left: -2px;
+					width: 10px;
+					height: 10px;
+					background: #dc8f03;
+					border-radius: 50%
+				}
+
+				.shui-c {
+					position: absolute;
+					top: 18px;
+					left: -2px;
+					width: 10px;
+					height: 35px;
+					background: orange;
+					border-radius: 0 0 0 5px
+				}
+
+				.deng:before {
+					position: absolute;
+					top: -7px;
+					left: 29px;
+					height: 12px;
+					width: 60px;
+					content: " ";
+					display: block;
+					z-index: 999;
+					border-radius: 5px 5px 0 0;
+					border: solid 1px #dc8f03;
+					background: orange;
+					background: linear-gradient(to right,#dc8f03,orange,#dc8f03,orange,#dc8f03)
+				}
+
+				.deng:after {
+					position: absolute;
+					bottom: -7px;
+					left: 10px;
+					height: 12px;
+					width: 60px;
+					content: " ";
+					display: block;
+					margin-left: 20px;
+					border-radius: 0 0 5px 5px;
+					border: solid 1px #dc8f03;
+					background: orange;
+					background: linear-gradient(to right,#dc8f03,orange,#dc8f03,orange,#dc8f03)
+				}
+
+				.deng-t {
+					font-family: 黑体,Arial,Lucida Grande,Tahoma,sans-serif;
+					font-size: 3.2rem;
+					color: #dc8f03;
+					font-weight: 700;
+					line-height: 85px;
+					text-align: center
+				}
+
+				.night .deng-box,.night .deng-box1,.night .deng-t {
+					background: 0 0!important
+				}
+
+				@-moz-keyframes swing {
+					0% {
+						-moz-transform: rotate(-10deg)
+					}
+
+					50% {
+						-moz-transform: rotate(10deg)
+					}
+
+					100% {
+						-moz-transform: rotate(-10deg)
+					}
+				}
+
+				@-webkit-keyframes swing {
+					0% {
+						-webkit-transform: rotate(-10deg)
+					}
+
+					50% {
+						-webkit-transform: rotate(10deg)
+					}
+
+					100% {
+						-webkit-transform: rotate(-10deg)
+					}
+				}
+			</style>
+		</head>
+		<body style="color:#00f;">
+			<div style="background-color:#333;border-radius:25px;box-shadow:0px 0px 5px #f200ff;padding:5px;margin-top:10px;margin-bottom:0px;"> 
+				<marquee> 
+					<b id="nr">公告：欢迎来到海洋插件社区（海洋官网），本站资源包含主流QQ框架和微信框架，欢迎下载！ 
+					</b> 
+				</marquee> 
+			</div>
+	<h2 style="font-size:15px;color:#f0a;">最新版本：20211001</h2><!--
+--><div class="logo_hd">
+<caption>
+	<a href="https://haiyangmeigui.github.io/haiyangshequ/index.html" target="_top" title="海洋插件社区">
+		<h1 style="text-align:center;"><img src="hycjsq.jpg" alt="海洋插件社区" title="海洋插件社区"/> &nbsp &nbsp &nbsp 海洋系列插件官网 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </h1>
+	</a>
+</caption>
+</div>
+<div class="flower">
+	<a href="https://jq.qq.com/?_wv=1027&k=vQ1T9J2n"  target="_blank">
+		<img src="haiyang.jpg" title="感谢您支持海洋！" />
+		<span style="font-size:15px;color:#f60;">联系海洋QQ：1017616098</span>
+	</a>
+</div>
+<script>
+	var span = document.getElementsByTagName("span")[0];
+	var image = document.getElementsByTagName("img")[1];
+	document.onmousemove = function(event){
+		var event = event || window.event ;
+		targetX = event.clientX - image.offsetWidth / 2;
+		targetY = event.clientY - image.offsetHeight / 2;
+		//span.innerHTML = event.clientX + "px  " + event.clientY + "px";
+	}
+
+//缓动效果
+var leaderX = 0, leaderY = 0, targetX = 0, targetY = 0;
+setInterval(fun,120);
+function fun(){
+	leaderX = leaderX + (targetX - leaderX) / 10;
+	leaderY = leaderY + (targetY - leaderY) / 10;
+	image.style.left = leaderX + "px";
+	image.style.top = leaderY + "px";
+}
+</script>
+<caption>
+	<h2 style="text-align:center;">
+		<a href="https://jq.qq.com/?_wv=1027&k=5Xeapvw"; style="color:#1af;"  target="_blank">官方老群①：367939837
+		</a>
+		<a href="https://jq.qq.com/?_wv=1027&k=vQ1T9J2n"; style="color:#e03;"  target="_blank">官方交流群②：246163125
+		</a>
+		<a href="https://jq.qq.com/?_wv=1027&k=Za1qv27F"; style="color:#fa1;"  target="_blank">官方框架群：341699190
+		</a>
+	</h2>
+</caption>
+<div class="lb-head">
+	<p class="first">
+		<a href="https://wwe.lanzouq.com/b01hnk7nc" target="_blank">小栗子框架
+		</a>
+	</p>
+	<p>
+		<a href="https://wwe.lanzouq.com/b01hnkbyh" target="_blank">乾坤QQ框架
+		</a>
+	</p>
+	<p>
+		<a href="https://wwe.lanzouq.com/b01i5rubi" target="_blank">HYQ框架 密码:HYQQ
+		</a>
+	</p>
+	<p>
+		<a href="https://wwe.lanzouq.com/b01hs24le" target="_blank">VLW微信框架
+		</a>
+	</p>
+	<p>
+		<a href="https://wwe.lanzouq.com/b01hqmilg" target="_blank">OnoQQ框架
+		</a>
+	</p>
+	<p style="border-left:none;">
+		<a href="https://wwe.lanzouq.com/b01hwk9qb" target="_blank">可爱猫微信框架
+		</a>
+	</p>
+	<p>
+		<a href="https://wwe.lanzouq.com/b01is6z1a" target="_blank">SmallQQ框架 密码:7www
+		</a>
+	</p>
+	<p>
+		<a href="https://wwe.lanzouq.com/b01ig4uza" target="_blank">MYQQ框架 密码:draw
+		</a>
+	</p>
+	<p>
+		<a href="https://wwe.lanzouq.com/b01hpcydi" target="_blank">ER bot框架
+		</a>
+	</p>
+	<p>
+		<a href="http://bbs.dawnbot.top/forum.php?mod=viewthread&tid=16" target="_blank">DawnbotPC框架
+		</a>
+	</p>
+</div>
+<!-- <h2>cellpadding设置单元格边距</h2>
+	<h2>cellspacing设置单元格间距</h2> -->
+	<table border="1"; cellpadding="10"; cellspacing="10";>	<!--cellpadding="10"单元格边距为10-->
+		<tr>						<!--cellspacing="10"单元格间距为10-->
+			<th rowspan="2"; bgcolor=#abf;>其他传送门</th>	<!--rowspan="2"纵跨两行-->
+			<td>
+				<a href="https://www.lanzoux.com/ihoPFfnm6fg" target="_blank">海洋群管娱乐综合插件</a>
+			</td>
+			<td>
+				<a href="https://www.lanzoux.com/iFwdcg13yba" target="_blank">多功能群转码设备版</a>
+			</td>
+			<td>
+				<a href="https://www.lanzoux.com/ih5kFg13xcf" target="_blank">多功能群转码单Q版</a>
+			</td>
+			<td>
+				<a href="https://www.lanzoux.com/b01hm2azi" target="_blank">免费插件 密码:9vjz</a>
+			</td>
+			<td>
+				<a href="https://www.lanzoux.com/idTiTfnmk4j" target="_blank">海洋综合插件控制台</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://www.lanzoux.com/iGTqAfnmk8d" target="_blank">海洋崩溃检测</a>
+			</td>
+			<td>
+				<a href="https://wwx.lanzoux.com/isFxNiegcwh" target="_blank">小软件</a>
+			</td>
+			<td>
+				<a href="https://www.lanzoux.com/b01hlri7c" target="_blank">本地语音图片 密码:6cef</a>
+			</td>
+			<td>
+				<a href="https://www.lanzoux.com/ihoPFfnm6fg" target="_blank">其他系列插件</a>
+			</td>
+			<td>
+				<a href="https://www.lanzoux.com/ihoPFfnm6fg" target="_blank">亿乐九五系统</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html><!--
